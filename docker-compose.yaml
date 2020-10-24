@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  playbook:
+   container_name: csharp
+    image: aimvector/csharp:1.0.0
+    build:
+      context: ./c#
+      target: debug
+    volumes:
+    - ./c#/src/:/work/
+    ports:
+      - 5000:5000
