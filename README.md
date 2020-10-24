@@ -17,5 +17,15 @@ docker run -d --restart unless-stopped -p 39107:9107 -e HARBOR_USERNAME=admin -e
 ```
 docker run --name myjenkins -p 8080:8080 -p 50000:50000 -v ${PWD}:/var/jenkins_home jenkins
 ```
+-----------------------------------
+# prometheus 
+- Link: https://prometheus.io/docs/prometheus/latest/installation/
+- Description: Running prometheus Server 
+- Command: 
+```
+docker run -p 9090:9090 -v ${PWD}/prometheus:/etc/prometheus -v ${pwd}/prometheus/data:/prometheus --name=prometheus prom/prometheus
+
+```
+
 
 
