@@ -2,6 +2,10 @@ FROM alpine:latest
 RUN apk update
 
 RUN apk add bash curl jq  tree --no-cache git
+RUN apk add bash tail
+RUN apk add bash tree 
+RUN apk add bash --no-cache git
+
 # Kubectl 
 RUN curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl" && chmod +x ./kubectl && mv ./kubectl /usr/local/bin/kubectl
 
