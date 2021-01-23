@@ -1,6 +1,16 @@
 # dockerize
 Runs all most everything in docker 
 
+```
+bash-shell $pwd 
+power-shell ${PWD}
+```
+ 
+-----------------------------------
+# Regular working Environment
+
+docker run -it --rm -v ${HOME}:/root/ -v ${PWD}:/work -w /work --net host alpine sh
+
 -----------------------------------
 # Harbor Exprter 
 - Link: https://github.com/c4po/harbor_exporter
